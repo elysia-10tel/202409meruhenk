@@ -2,35 +2,268 @@
 <html lang="jp"  prefix="og: http://ogp.me/ns#">
   <head>
     <style>
-      body, form {
+      body {
         margin: 0 auto;
+        padding: 0px;
+        font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+        font-size: 16px;	/*文字サイズ*/
+        line-height: 2;		/*行間*/
+        -webkit-text-size-adjust: none;
       }
-      table, th, td {
-          border: 1px solid black;
+      .df-table {
+        margin: 0 auto;
+        border-collapse:collapse;
+        font-size: 100%;
+        border-spacing: 0;
+        border: 1px solid black;
+      }
+      .df-cell {
+        border-spacing: 0;
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
       }
     </style>
-    <title>2024年9月 「メンヘルサンドイッチ」 メニュー</title>
+    <script text="javascript">
+      function changeNum(){
+        let total=0;
+        total += parseInt(document.getElementById("itemPrice1").value,0) *  parseInt(document.getElementById("itemNum1").value,0); 
+        total += parseInt(document.getElementById("itemPrice2").value,0) *  parseInt(document.getElementById("itemNum2").value,0);
+        total += parseInt(document.getElementById("itemPrice3").value,0) *  parseInt(document.getElementById("itemNum3").value,0); 
+        total += parseInt(document.getElementById("itemPrice4").value,0) *  parseInt(document.getElementById("itemNum4").value,0); 
+        total += parseInt(document.getElementById("itemPrice5").value,0) *  parseInt(document.getElementById("itemNum5").value,0); 
+        total += parseInt(document.getElementById("itemPrice6").value,0) *  parseInt(document.getElementById("itemNum6").value,0); 
+        total += parseInt(document.getElementById("itemPrice7").value,0) *  parseInt(document.getElementById("itemNum7").value,0); 
+        total += parseInt(document.getElementById("itemPrice8").value,0) *  parseInt(document.getElementById("itemNum8").value,0); 
+        total += parseInt(document.getElementById("itemPrice9").value,0) *  parseInt(document.getElementById("itemNum9").value,0); 
+        total += parseInt(document.getElementById("itemPrice10").value,0) *  parseInt(document.getElementById("itemNum10").value,0); 
+        total += parseInt(document.getElementById("itemPrice11").value,0) *  parseInt(document.getElementById("itemNum11").value,0); 
+        total += parseInt(document.getElementById("itemPrice12").value,0) *  parseInt(document.getElementById("itemNum12").value,0); 
+        total += parseInt(document.getElementById("itemPrice13").value,0) *  parseInt(document.getElementById("itemNum13").value,0); 
+        total += parseInt(document.getElementById("itemPrice14").value,0) *  parseInt(document.getElementById("itemNum14").value,0); 
+        total += parseInt(document.getElementById("itemPrice15").value,0) *  parseInt(document.getElementById("itemNum15").value,0); 
+        total += parseInt(document.getElementById("itemPrice16").value,0) *  parseInt(document.getElementById("itemNum16").value,0); 
+        total += parseInt(document.getElementById("itemPrice17").value,0) *  parseInt(document.getElementById("itemNum17").value,0); 
+        total += parseInt(document.getElementById("itemPrice18").value,0) *  parseInt(document.getElementById("itemNum18").value,0); 
+        total += parseInt(document.getElementById("itemPrice19").value,0) *  parseInt(document.getElementById("itemNum19").value,0); 
+        total += parseInt(document.getElementById("itemPrice20").value,0) *  parseInt(document.getElementById("itemNum20").value,0); 
+        total += parseInt(document.getElementById("itemPrice21").value,0) *  parseInt(document.getElementById("itemNum21").value,0); 
+        total += parseInt(document.getElementById("itemPrice22").value,0) *  parseInt(document.getElementById("itemNum22").value,0); 
+        total += parseInt(document.getElementById("itemPrice23").value,0) *  parseInt(document.getElementById("itemNum23").value,0); 
+        total += parseInt(document.getElementById("itemPrice24").value,0) *  parseInt(document.getElementById("itemNum24").value,0); 
+        total += parseInt(document.getElementById("itemPrice25").value,0) *  parseInt(document.getElementById("itemNum25").value,0); 
+        total += parseInt(document.getElementById("itemPrice26").value,0) *  parseInt(document.getElementById("itemNum26").value,0); 
+        total += parseInt(document.getElementById("itemPrice27").value,0) *  parseInt(document.getElementById("itemNum27").value,0); 
+        total += parseInt(document.getElementById("itemPrice28").value,0) *  parseInt(document.getElementById("itemNum28").value,0); 
+        total += parseInt(document.getElementById("itemPrice29").value,0) *  parseInt(document.getElementById("itemNum29").value,0); 
+        total += parseInt(document.getElementById("itemPrice30").value,0) *  parseInt(document.getElementById("itemNum30").value,0); 
+        total += parseInt(document.getElementById("itemPrice31").value,0) *  parseInt(document.getElementById("itemNum31").value,0); 
+        alert("現在の合計は" + total.toString() + "円です。");
+      }
+    </script>
+    <title>2024年9月 イベント</title>
   </head>
   <body>
-    <h1 style="text-align: center">2024年9月 「メンヘルサンドイッチ」 メニュー</h1>
-    <form>
-    <table>
+    <form class=".df-form">
+    <table class="df-table">
       <tr>
-        <th></th>
-        <td>番号</td>
-        <td>サンドイッチ名</td>
-        <td>お値段</td>
-        <td>数量</td>
+        <th class="df-cell"></th>
+        <td class="df-cell">番号</td>
+        <td class="df-cell">サンドイッチ名</td>
+        <td class="df-cell">お値段</td>
+        <td class="df-cell">数量</td>
       </tr>    
       <tr>
-        <th rowspan="3">野菜系</th>
-        <td>1</td>
-        <td>かぼちゃサラダ</td>
-        <td id="item1" name="item1" value="432">432円</td>
-        <td><input type="text" size="2"/></td>
+        <th class="df-cell" rowspan="3" bgcolor="green">野菜系</th>
+        <td class="df-cell">1</td>
+        <td class="df-cell">かぼちゃサラダ</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice1" value="432"/>432円</td>
+        <td class="df-cell"><input type="text" id="itemNum1" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">2</td>
+        <td class="df-cell">にんじんサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice2" value="432"/>432円</td>
+        <td class="df-cell"><input type="text" id="itemNum2" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">3</td>
+        <td class="df-cell">トマトミックス</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice3" value="518"/>518円</td>
+        <td class="df-cell"><input type="text" id="itemNum3" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <th class="df-cell" rowspan="15" bgcolor="red">お肉系</th>
+        <td class="df-cell">4</td>
+        <td class="df-cell">熟成ハムサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice4" value="432"/>432円</td>
+        <td class="df-cell"><input type="text" id="itemNum4" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">5</td>
+        <td class="df-cell">梅肉入り蓮根と鶏肉サンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice5" value="432"/>432円</td>
+        <td class="df-cell"><input type="text" id="itemNum5" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">6</td>
+        <td class="df-cell">タマゴサンド</td>
+          <td class="df-cell"><input type="hidden" id="itemPrice6" value="432"/>432円</td>
+          <td class="df-cell"><input type="text" id="itemNum6" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">7</td>
+        <td class="df-cell">ツナサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice7" value="453">453円</td>
+        <td class="df-cell"><input type="text" id="itemNum7" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">8</td>
+        <td class="df-cell">チーズチキン大葉巻き（タマゴ）</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice8" value="496">496円</td>
+        <td class="df-cell"><input type="text" id="itemNum8" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">9</td>
+        <td class="df-cell">（八幡屋の）七味入り焼肉サンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice9" value="496">496円</td>
+        <td class="df-cell"><input type="text" id="itemNum9" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">10</td>
+        <td class="df-cell">常陸牛入りメンチカツサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice10" value="518">518円</td>
+        <td class="df-cell"><input type="text" id="itemNum10" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">11</td>
+        <td class="df-cell">和風チキン竜田</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice11" value="518">518円</td>
+        <td class="df-cell"><input type="text" id="itemNum11" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">12</td>
+        <td class="df-cell">いかフライサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice12" value="540">540円</td>
+        <td class="df-cell"><input type="text" id="itemNum12" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">13</td>
+        <td class="df-cell">エビカツとタマゴのペアサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice13" value="561">561円</td>
+        <td class="df-cell"><input type="text" id="itemNum13" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">14</td>
+        <td class="df-cell">常陸牛コロッケサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice14" value="583">583円</td>
+        <td class="df-cell"><input type="text" id="itemNum14" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">15</td>
+        <td class="df-cell">エビカツサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice15" value="648">648円</td>
+        <td class="df-cell"><input type="text" id="itemNum15" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">16</td>
+        <td class="df-cell">クリームチーズサーモン</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice16" value="648">648円</td>
+        <td class="df-cell"><input type="text" id="itemNum16" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">17</td>
+        <td class="df-cell">ヨードラン光の目玉焼きサンド</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice17" value="648">648円</td>
+        <td class="df-cell"><input type="text" id="itemNum17" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">18</td>
+        <td class="df-cell">三元豚ロースカツ</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice18" value="777">777円</td>
+        <td class="df-cell"><input type="text" id="itemNum18" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <th class="df-cell" bgcolor="blue"></th>
+        <td class="df-cell">19</td>
+        <td class="df-cell">おすすめパック（フルーツ・玉子・ハム・カツ）</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice19" value="799">799円</td>
+        <td class="df-cell"><input type="text" id="itemNum19" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <th class="df-cell" rowspan="12" bgcolor="yellow">デザート系</th>
+        <td class="df-cell">20</td>
+        <td class="df-cell">おぐら生クリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice20" value="388">388円</td>
+        <td class="df-cell"><input type="text" id="itemNum20" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">21</td>
+        <td class="df-cell">みかんパイン缶詰生クリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice21" value="432">432円</td>
+        <td class="df-cell"><input type="text" id="itemNum21" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">22</td>
+        <td class="df-cell">ブルーベリー生クリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice22" value="432">432円</td>
+        <td class="df-cell"><input type="text" id="itemNum22" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">23</td>
+        <td class="df-cell">甘夏生クリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice23" value="496">496円</td>
+        <td class="df-cell"><input type="text" id="itemNum23" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">24</td>
+        <td class="df-cell">黄桃と瀬戸内レモンクリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice24" value="496">496円</td>
+        <td class="df-cell"><input type="text" id="itemNum24" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">25</td>
+        <td class="df-cell">メロン生クリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice25" value="540">540円</td>
+        <td class="df-cell"><input type="text" id="itemNum25" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">26</td>
+        <td class="df-cell"><font color="blue">愛知いちじく生クリーム</font></td>
+        <td class="df-cell"><input type="hidden" id="itemPrice26" value="561">561円</td>
+        <td class="df-cell"><input type="text" id="itemNum26" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">27</td>
+        <td class="df-cell"><font color="blue">岡山産オーロラブロック生クリーム</font></td>
+        <td class="df-cell"><input type="hidden" id="itemPrice27" value="583">583円</td>
+        <td class="df-cell"><input type="text" id="itemNum27" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">28</td>
+        <td class="df-cell">いちごバナナ生クリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice28" value="648">648円</td>
+        <td class="df-cell"><input type="text" id="itemNum28" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">29</td>
+        <td class="df-cell">南アルプス市産シャインマスカット</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice29" value="691">691円</td>
+        <td class="df-cell"><input type="text" id="itemNum29" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">30</td>
+        <td class="df-cell">フルーツスペシャル（シャインマスカット）</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice30" value="691">691円</td>
+        <td class="df-cell"><input type="text" id="itemNum30" size="2" value="0" onchange="changeNum();"/></td>
+      </tr>
+      <tr>
+        <td class="df-cell">31</td>
+        <td class="df-cell">岡山産清水桃生クリーム</td>
+        <td class="df-cell"><input type="hidden" id="itemPrice31" value="777">777円</td>
+        <td class="df-cell"><input type="text" id="itemNum31" size="2" value="0" onchange="changeNum();"/></td>
       </tr>
     </table>
-      <input type="submit" />
-      </form>
+  </form>
   </body>
 </html>
